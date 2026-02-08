@@ -1,0 +1,16 @@
+# Unique 'output' fields from /home/acheck/pbx_provisioning/provisioning vendor model files
+# Source: *model*.txt, *.txt in tl-*-templates and models.d/
+# Generated: sorted list, one pattern per line
+
+${mac}.cfg
+${mac}-registration.cfg
+${mac}.txt
+${MAC}.xml
+SEP${MAC}.cnf.xml
+snomD140-${MAC}.htm
+snomD150-${MAC}.htm
+snomD713-${MAC}.htm
+snomD717-${MAC}.htm
+snomD735-${MAC}.htm
+snomD785-${MAC}.htm
+spa${mac}.cfg
