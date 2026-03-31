@@ -24,9 +24,11 @@ Requires:      fanvil-firmware
 
 %install
 mkdir -p %{buildroot}/etc/asterisk/provisioning/models.d/
+mkdir -p %{buildroot}/etc/asterisk/provisioning/panels.d/
 mkdir -p %{buildroot}/usr/local/sbin
 install -m 644 *cfg %{buildroot}/etc/asterisk/provisioning/
-install -m 644 fanvil.txt %{buildroot}/etc/asterisk/provisioning/models.d/
+install -m 644 fanvil-model.txt %{buildroot}/etc/asterisk/provisioning/models.d/
+install -m 644 fanvil-panel.txt %{buildroot}/etc/asterisk/provisioning/panels.d/
 install -m 755 generate_compdir_fanvil.py %{buildroot}/usr/local/sbin/
 mkdir -p %{buildroot}/home/PlcmSpIp
 
