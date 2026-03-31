@@ -48,7 +48,7 @@ answer_after_policy$: idle
 
 # in order to perform automated updates, define the firmware setting file URL
 # where you specify the final firmware image URL
-firmware_status: https://${HTTP_USER}:${HTTP_PASSWORD}@${SERVER}/provisioning/snom%model-firmware.htm
+firmware_status: ${PROTO}://${PROV_USER}:${PROV_PASSWORD}@${FIRMWARE_SERVER}${FIRMWARE_PATH}/snom%model-firmware.htm
 
 #define also the update policy here
 # valid values are <auto_update>, <ask_for_update>, <never_update_firm>,
@@ -58,7 +58,7 @@ update_policy: auto_update
 #define the firmware update interval here, amount in minutes, default is 1440 = 1 day
 ## firmware_interval: 2880
 logon_wizard: off
-firmware: ${PROTO}://${PROV_USER}:${PROV_PASSWORD}@${FIRMWARE_SERVER}${FIRMWARE_PATH}/FIRMWARE-SNOM/%firmware
+firmware: https://${FIRMWARE_SERVER}${FIRMWARE_PATH}/FIRMWARE-SNOM/%firmware
 
 </pre>
 </html>
