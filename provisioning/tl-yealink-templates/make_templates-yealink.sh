@@ -5,7 +5,7 @@ NAME=tl-yealink-templates
 BUILD=/home/builder/build/$NAME
 
 cd $BASE/$NAME
-#git pull
+git pull
 
 mkdir -p $BUILD
 rm -rf $BUILD/$NAME
