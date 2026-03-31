@@ -55,7 +55,7 @@ input_3=polycom_local_uc.cfg
 output_3=${TENANT}-settings-uc.cfg
 
 [polycom-450]
-label=Polycom SP 450 
+label=Polycom SP 450
 lines=3
 check_sync=polycom-check-cfg
 translationmap=polycom

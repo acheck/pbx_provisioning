@@ -8,7 +8,7 @@ line_template=yealink_line.cfg
 linekey_template=yealink_button_linekey.cfg
 blf_template=yealink_button_blf.cfg
 speeddial_template=yealink_button_speeddial.cfg
-n_a_template=yealink_button_na.cfg 
+n_a_template=yealink_button_na.cfg
 output=${mac}.cfg
 input_1=yealink_device_generic.cfg
 output_1=y000000000037.cfg
@@ -659,7 +659,7 @@ command_1=/usr/local/sbin/generate_compdir_yealink.py ${TENANT}
 
 [yealink-t48g]
 translationmap=yealink
-label=yealink T48G
+label=Yealink T48G
 lines=10
 firmware=T48-35.83.0.120.rom
 phone_template=yealink_phone.cfg
@@ -711,7 +711,7 @@ command_1=/usr/local/sbin/generate_compdir_yealink.py ${TENANT}
 
 [yealink-t48u]
 translationmap=yealink
-label=yealink T48U
+label=Yealink T48U
 lines=10
 firmware=T46U-T43U-T46U-T41U-T48U-T42U-T44U-T44W-108.87.0.15.rom
 phone_template=yealink_phone.cfg
@@ -997,7 +997,7 @@ command_1=/usr/local/sbin/generate_compdir_yealink.py ${TENANT}
 
 [yealink-t46u]
 translationmap=yealink
-label=yealink T46U
+label=Yealink T46U
 lines=10
 firmware=T46U-T43U-T46U-T41U-T48U-T42U-T44U-T44W-108.87.0.15.rom
 phone_template=yealink_phone.cfg
@@ -1023,7 +1023,7 @@ command_1=/usr/local/sbin/generate_compdir_yealink.py ${TENANT}
 
 [yealink-vp59]
 translationmap=yealink
-label=yealink VP59
+label=Yealink VP59
 lines=16
 firmware=VP59_9.0-91.86.0.69.rom
 phone_template=yealink_phone.cfg

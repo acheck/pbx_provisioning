@@ -1,0 +1,24 @@
+# Image Version
+image_version: "P0S3-08-2-00"
+
+# Proxy Server
+proxy1_address: "${SERVER}"           ; Dotted IP of Proxy
+proxy_backup: "${SERVER}"               ; Dotted IP of Backup Proxy
+proxy_emergency: "${SERVER}"            ; Dotted IP of Emergency Proxy
+
+# Proxy Registration (0-disable (default), 1-enable)
+proxy_register: "1"
+
+# Preferred Codec
+preferred_codec: "g711ulaw"
+
+# NAT/Firewall Traversal
+nat_enable: "1"
+
+# Inband DTMF Settings (0-disable, 1-enable (default))
+dtmf_inband: "1"
+dtmf_outofband: "avt"
+
+# Call Waiting (0-disabled, 1-enabled, 2-disabled with no user control, 3-enabled with no user control)
+call_waiting: "1"                 ; Default 1 (Call Waiting enabled)
+

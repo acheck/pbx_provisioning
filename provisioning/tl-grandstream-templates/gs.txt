@@ -189,7 +189,7 @@ command_1=/usr/local/sbin/gs-convert-to-xml.py ${mac}
 command_2=/usr/local/sbin/generate_compdir_gs.py ${TENANT}
 
 [gs-gxp2170vpk]
-label=Grandstream GXP2170 + VPKs 
+label=Grandstream GXP2170 + VPKs
 lines=6
 check_sync=gs-check-cfg
 translationmap=grandstream

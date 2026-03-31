@@ -1,0 +1,147 @@
+[linksys-pap2]
+label=Linksys PAP2
+lines=2
+phone_template=linksys_phone_pap.cfg
+line_template=linksys_line_pap.cfg
+output=spa${mac}.cfg
+input_1=linksys_spa_model.cfg
+output_1=init.cfg
+command_1=/usr/local/sbin/linksys_reload.pl ${mac}
+
+[linksys-spa2100]
+label=Linksys SPA2100
+lines=2
+phone_template=linksys_phone_2100.cfg
+line_template=linksys_line_2100.cfg
+output=spa${mac}.cfg
+input_1=linksys_spa_model.cfg
+output_1=spa2100.cfg
+command_1=/usr/local/sbin/linksys_reload.pl ${mac}
+
+[linksys-spa2102]
+label=Linksys SPA2102
+lines=2
+phone_template=linksys_phone_2100.cfg
+line_template=linksys_line_2100.cfg
+output=spa${mac}.cfg
+input_1=linksys_spa_model.cfg
+output_1=spa2102.cfg
+command_1=/usr/local/sbin/linksys_reload.pl ${mac}
+
+[linksys-spa841]
+label=Linksys SPA841
+lines=2
+phone_template=linksys_phone_9xx.cfg
+line_template=linksys_line_9xx.cfg
+output=spa${mac}.cfg
+input_1=linksys_spa_model.cfg
+output_1=spa841.cfg
+command_1=/usr/local/sbin/linksys_reload.pl ${mac}
+
+[linksys-spa901]
+label=Linksys SPA901
+lines=1
+phone_template=linksys_phone_9xx.cfg
+line_template=linksys_line_9xx.cfg
+output=spa${mac}.cfg
+input_1=linksys_spa_model.cfg
+output_1=spa901.cfg
+
+[linksys-spa921]
+label=Linksys SPA921
+lines=1
+phone_template=linksys_phone_9xx.cfg
+line_template=linksys_line_9xx.cfg
+output=spa${mac}.cfg
+input_1=linksys_spa_model.cfg
+output_1=spa921.cfg
+command_1=/usr/local/sbin/linksys_reload.pl ${mac}
+
+[linksys-spa922]
+label=Linksys SPA922
+lines=1
+phone_template=linksys_phone_9xx.cfg
+line_template=linksys_line_9xx.cfg
+output=spa${mac}.cfg
+input_1=linksys_spa_model.cfg
+output_1=spa922.cfg
+command_1=/usr/local/sbin/linksys_reload.pl ${mac}
+
+[linksys-spa941]
+label=Linksys SPA941
+lines=2
+phone_template=linksys_phone_9xx.cfg
+line_template=linksys_line_9xx.cfg
+output=spa${mac}.cfg
+input_1=linksys_spa_model.cfg
+output_1=spa941.cfg
+command_1=/usr/local/sbin/linksys_reload.pl ${mac}
+
+[linksys-spa942]
+label=Linksys SPA942
+lines=4
+phone_template=linksys_phone_9xx.cfg
+line_template=linksys_line_9xx.cfg
+blf_template=linksys_blf_9xx.cfg
+speeddial_template=linksys_speeddial_9xx.cfg
+output=spa${mac}.cfg
+input_1=linksys_spa_model.cfg
+output_1=spa942.cfg
+command_1=/usr/local/sbin/linksys_reload.pl ${mac}
+
+[linksys-spa962]
+label=Linksys SPA962
+lines=6
+phone_template=linksys_phone_9xx.cfg
+line_template=linksys_line_9xx.cfg
+blf_template=linksys_blf_9xx.cfg
+speeddial_template=linksys_speeddial_9xx.cfg
+output=spa${mac}.cfg
+input_1=linksys_spa_model.cfg
+output_1=spa962.cfg
+command_1=/usr/local/sbin/linksys_reload.pl ${mac}
+
+[linksys-spa962-932]
+label=Linksys SPA962+SPA932
+lines=6
+phone_template=linksys_phone_9xx.cfg
+line_template=linksys_line_9xx.cfg
+blf_template=linksys_blf_93x.cfg
+speeddial_template=linksys_speeddial_93x.cfg
+output=spa${mac}.cfg
+input_1=linksys_spa_model.cfg
+output_1=spa962.cfg
+command_1=/usr/local/sbin/linksys_reload.pl ${mac}
+
+[cisco-7940]
+label=Cisco 7940
+lines=2
+repeat_registrations=1
+phone_template=cisco-79xx_phone.cfg
+line_template=cisco-79xx_line.cfg
+output=SIP${MAC}.cnf
+input_1=cisco-79xx-SIPDefault.cnf
+output_1=SIPDefault.cnf
+required_1=OS79XX.TXT
+required_2=dialplan.xml
+
+[cisco-7960]
+label=Cisco 7960
+lines=6
+repeat_registrations=1
+phone_template=cisco-79xx_phone.cfg
+line_template=cisco-79xx_line.cfg
+output=SIP${MAC}.cnf
+input_1=cisco-79xx-SIPDefault.cnf
+output_1=SIPDefault.cnf
+required_1=OS79XX.TXT
+required_2=dialplan.xml
+
+[cisco-7906]
+label=Cisco 7906
+lines=1
+repeat_registrations=1
+phone_template=cisco-791x_phone.cfg
+line_template=cisco-791x_line.cfg
+output=SEP${MAC}.cnf.xml
+

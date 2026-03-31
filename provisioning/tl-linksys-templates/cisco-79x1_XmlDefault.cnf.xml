@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Default>
+<callManagerGroup>
+    <members>
+       <member priority="0">
+          <callManager>
+             <ports>
+                <ethernetPhonePort>2000</ethernetPhonePort>
+                <mgcpPorts>
+                   <listen>2427</listen>
+                   <keepAlive>2428</keepAlive>
+                </mgcpPorts>
+             </ports>
+             <processNodeName></processNodeName>
+          </callManager>
+       </member>
+    </members>
+ </callManagerGroup>
+<loadInformation115 model="IP Phone 7941">SIP41.8-3-1S</loadInformation115>
+<loadInformation30018 model="IP Phone 7961">SIP41.8-3-1S</loadInformation30018>
+<loadInformation308 model="IP Phone 7961G-GE">SIP41.8-3-1S</loadInformation308>
+<loadInformation309 model="IP Phone 7941G-GE">SIP41.8-3-1S</loadInformation309>
+<authenticationURL></authenticationURL>
+<directoryURL></directoryURL>
+<idleURL></idleURL>
+<informationURL></informationURL>
+<messagesURL></messagesURL>
+<servicesURL></servicesURL>
+</Default>
