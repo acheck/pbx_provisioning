@@ -1,0 +1,22 @@
+[ciscocp-7821]
+label=Cisco CP7821
+lines=1
+buttons=1
+check_sync=cisco-reset
+translationmap=cisco88xx
+phone_template=cisco-78xx_phone.cfg
+line_template=cisco-88xx_line.cfg
+blf_template=cisco-88xx_button_blf.cfg
+speeddial_template=cisco-88xx_button_speeddial.cfg
+output=SEP${MAC}.cnf.xml
+
+input_1=cisco-88xx_dial.cfg
+output_1=DialTemplate.xml
+input_2=cisco-88xx_ctl.cfg
+output_2=CTLSEP${MAC}.tlv
+input_3=cisco-88xx_ctl.cfg
+output_3=ITLSEP${MAC}.tlv
+input_4=cisco-88xx_softkey.cfg
+output_4=softkeyDefault.xml
+
+command_1=/var/thirdlane_load/ciscocpe_rebuild_phones.lua

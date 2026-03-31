@@ -1,0 +1,327 @@
+[polycom-301]
+label=Polycom SP 301
+lines=2
+check_sync=polycom-check-cfg
+translationmap=polycom
+phone_template=polycom_phone.cfg
+line_template=polycom_line.cfg
+output=${mac}-registration.cfg
+input_1=polycom_mac.cfg
+output_1=${mac}.cfg
+input_2=polycom_local.cfg
+output_2=${TENANT}-settings.cfg
+
+[polycom-501]
+label=Polycom SP 501
+lines=3
+check_sync=polycom-check-cfg
+translationmap=polycom
+phone_template=polycom_phone.cfg
+line_template=polycom_line.cfg
+output=${mac}-registration.cfg
+input_1=polycom_mac.cfg
+output_1=${mac}.cfg
+input_2=polycom_local.cfg
+output_2=${TENANT}-settings.cfg
+
+[polycom-601]
+label=Polycom SP 601
+lines=6
+check_sync=polycom-check-cfg
+translationmap=polycom
+phone_template=polycom_phone.cfg
+line_template=polycom_line.cfg
+blf_template=polycom_blf.cfg
+output=${mac}-registration.cfg
+input_1=polycom_mac.cfg
+output_1=${mac}.cfg
+input_2=polycom_local.cfg
+output_2=${TENANT}-settings.cfg
+
+[polycom-331]
+label=Polycom SP 321/331/335
+lines=2
+check_sync=polycom-check-cfg
+translationmap=polycom
+phone_template=polycom_phone.cfg
+line_template=polycom_line.cfg
+blf_template=polycom_blf.cfg
+output=${mac}-registration.cfg
+input_1=polycom_mac.cfg
+output_1=${mac}.cfg
+input_2=polycom_local.cfg
+output_2=${TENANT}-settings.cfg
+input_3=polycom_local_uc.cfg
+output_3=${TENANT}-settings-uc.cfg
+
+[polycom-450]
+label=Polycom SP 450 
+lines=3
+check_sync=polycom-check-cfg
+translationmap=polycom
+phone_template=polycom_phone.cfg
+line_template=polycom_line.cfg
+blf_template=polycom_blf.cfg
+output=${mac}-registration.cfg
+input_1=polycom_mac.cfg
+output_1=${mac}.cfg
+input_2=polycom_local_uc.cfg
+output_2=${TENANT}-settings-uc.cfg
+
+[polycom-550]
+label=Polycom SP 550/560
+lines=3
+check_sync=polycom-check-cfg
+translationmap=polycom
+phone_template=polycom_phone.cfg
+line_template=polycom_line.cfg
+blf_template=polycom_blf.cfg
+output=${mac}-registration.cfg
+input_1=polycom_mac.cfg
+output_1=${mac}.cfg
+input_2=polycom_local_uc.cfg
+output_2=${TENANT}-settings-uc.cfg
+
+[polycom-650]
+label=Polycom SP 650/670
+lines=6
+check_sync=polycom-check-cfg
+translationmap=polycom
+phone_template=polycom_phone.cfg
+line_template=polycom_line.cfg
+blf_template=polycom_blf.cfg
+output=${mac}-registration.cfg
+input_1=polycom_mac.cfg
+output_1=${mac}.cfg
+input_2=polycom_local_uc.cfg
+output_2=${TENANT}-settings-uc.cfg
+
+[polycom-4000]
+label=Polycom SS 4000
+lines=1
+check_sync=polycom-check-cfg
+translationmap=polycom
+phone_template=polycom_phone.cfg
+line_template=polycom_line.cfg
+output=${mac}-registration.cfg
+input_1=polycom_mac.cfg
+output_1=${mac}.cfg
+input_2=polycom_local.cfg
+output_2=${TENANT}-settings.cfg
+
+[polycom-6000]
+label=Polycom SS 5000/6000/7000
+lines=1
+check_sync=polycom-check-cfg
+translationmap=polycom
+phone_template=polycom_phone.cfg
+line_template=polycom_line.cfg
+blf_template=polycom_blf.cfg
+output=${mac}-registration.cfg
+input_1=polycom_mac.cfg
+output_1=${mac}.cfg
+input_2=polycom_local_uc.cfg
+output_2=${TENANT}-settings-uc.cfg
+
+[polycom-vvx201]
+label=Polycom VVX 101/201
+lines=2
+check_sync=polycom-check-cfg
+translationmap=polycom
+phone_template=polycom_phone.cfg
+line_template=polycom_line.cfg
+blf_template=polycom_blf.cfg
+output=${mac}-registration.cfg
+input_1=polycom_mac.cfg
+output_1=${mac}.cfg
+input_2=polycom_local_uc.cfg
+output_2=${TENANT}-settings-uc.cfg
+command_1=/usr/local/sbin/generate_compdir_polycom.py ${TENANT}
+
+[polycom-vvx300]
+label=Polycom VVX 300/310
+lines=3
+check_sync=polycom-check-cfg
+translationmap=polycom
+phone_template=polycom_phone.cfg
+line_template=polycom_line.cfg
+blf_template=polycom_blf.cfg
+output=${mac}-registration.cfg
+input_1=polycom_mac.cfg
+output_1=${mac}.cfg
+input_2=polycom_local_uc.cfg
+output_2=${TENANT}-settings-uc.cfg
+command_1=/usr/local/sbin/generate_compdir_polycom.py ${TENANT}
+
+[polycom-vvx400]
+label=Polycom VVX 400/410
+lines=1
+check_sync=polycom-check-cfg
+translationmap=polycom
+phone_template=polycom_phone.cfg
+line_template=polycom_line.cfg
+blf_template=polycom_blf.cfg
+output=${mac}-registration.cfg
+input_1=polycom_mac.cfg
+output_1=${mac}.cfg
+input_2=polycom_local_uc.cfg
+output_2=${TENANT}-settings-uc.cfg
+command_1=/usr/local/sbin/generate_compdir_polycom.py ${TENANT}
+
+[polycom-vvx500]
+label=Polycom VVX 500
+lines=1
+check_sync=polycom-check-cfg
+translationmap=polycom
+phone_template=polycom_phone.cfg
+line_template=polycom_line.cfg
+blf_template=polycom_blf.cfg
+output=${mac}-registration.cfg
+input_1=polycom_mac.cfg
+output_1=${mac}.cfg
+input_2=polycom_local_uc.cfg
+output_2=${TENANT}-settings-uc.cfg
+command_1=/usr/local/sbin/generate_compdir_polycom.py ${TENANT}
+
+[polycom-vvx600]
+label=Polycom VVX 600
+lines=1
+check_sync=polycom-check-cfg
+translationmap=polycom
+phone_template=polycom_phone.cfg
+line_template=polycom_line.cfg
+blf_template=polycom_blf.cfg
+output=${mac}-registration.cfg
+input_1=polycom_mac.cfg
+output_1=${mac}.cfg
+input_2=polycom_local_uc.cfg
+output_2=${TENANT}-settings-uc.cfg
+command_1=/usr/local/sbin/generate_compdir_polycom.py ${TENANT}
+
+[polycom-vvx150]
+label=Polycom VVX 150
+lines=1
+check_sync=polycom-check-cfg
+translationmap=polycom
+phone_template=polycom_phone.cfg
+line_template=polycom_line.cfg
+blf_template=polycom_blf.cfg
+output=${mac}-registration.cfg
+input_1=polycom_mac.cfg
+output_1=${mac}.cfg
+input_2=polycom_local_uc.cfg
+output_2=${TENANT}-settings-uc.cfg
+command_1=/usr/local/sbin/generate_compdir_polycom.py ${TENANT}
+
+[polycom-vvx250]
+label=Polycom VVX 250
+lines=1
+check_sync=polycom-check-cfg
+translationmap=polycom
+phone_template=polycom_phone.cfg
+line_template=polycom_line.cfg
+blf_template=polycom_blf.cfg
+output=${mac}-registration.cfg
+input_1=polycom_mac.cfg
+output_1=${mac}.cfg
+input_2=polycom_local_uc.cfg
+output_2=${TENANT}-settings-uc.cfg
+command_1=/usr/local/sbin/generate_compdir_polycom.py ${TENANT}
+
+[polycom-vvx350]
+label=Polycom VVX 350
+lines=1
+check_sync=polycom-check-cfg
+translationmap=polycom
+phone_template=polycom_phone.cfg
+line_template=polycom_line.cfg
+blf_template=polycom_blf.cfg
+output=${mac}-registration.cfg
+input_1=polycom_mac.cfg
+output_1=${mac}.cfg
+input_2=polycom_local_uc.cfg
+output_2=${TENANT}-settings-uc.cfg
+command_1=/usr/local/sbin/generate_compdir_polycom.py ${TENANT}
+
+[polycom-vvx450]
+label=Polycom VVX 450
+lines=1
+check_sync=polycom-check-cfg
+translationmap=polycom
+phone_template=polycom_phone.cfg
+line_template=polycom_line.cfg
+blf_template=polycom_blf.cfg
+output=${mac}-registration.cfg
+input_1=polycom_mac.cfg
+output_1=${mac}.cfg
+input_2=polycom_local_uc.cfg
+output_2=${TENANT}-settings-uc.cfg
+command_1=/usr/local/sbin/generate_compdir_polycom.py ${TENANT}
+
+[polycom-vvxd230]
+label=Polycom VVX D230
+lines=10
+check_sync=obi-check-cfg
+translationmap=obipoly
+phone_template=polycom_phone_obi.cfg
+line_template=polycom_line.cfg
+output=${MAC}.xml
+input_1=polycom_device_vvxd230.cfg
+output_1=VVXD230.xml
+command_1=/usr/local/sbin/generate_compdir_obi.py ${TENANT}
+
+[polycom-obi300]
+label=Polycom OBi300
+lines=1
+check_sync=obi-check-cfg
+translationmap=obipoly
+phone_template=polycom_phone_obi.cfg
+line_template=polycom_line.cfg
+output=${MAC}.xml
+input_1=polycom_device_obi3xx.cfg
+output_1=OBi300.xml
+
+[polycom-obi302]
+label=Polycom OBi302
+lines=2
+check_sync=obi-check-cfg
+translationmap=obipoly
+phone_template=polycom_phone_obi.cfg
+line_template=polycom_line.cfg
+output=${MAC}.xml
+input_1=polycom_device_obi3xx.cfg
+output_1=OBi302.xml
+
+[polycom-obi312]
+label=Polycom OBi312
+lines=2
+check_sync=obi-check-cfg
+translationmap=obipoly
+phone_template=polycom_phone_obi.cfg
+line_template=polycom_line.cfg
+output=${MAC}.xml
+input_1=polycom_device_obi3xx.cfg
+output_1=OBi312.xml
+
+[polycom-obi504]
+label=Polycom OBi504
+lines=4
+check_sync=obi-check-cfg
+translationmap=obipoly
+phone_template=polycom_phone_obi.cfg
+line_template=polycom_line.cfg
+output=${MAC}.xml
+input_1=polycom_device_obi5xx.cfg
+output_1=OBi504.xml
+
+[polycom-obi508]
+label=Polycom OBi508
+lines=8
+check_sync=obi-check-cfg
+translationmap=obipoly
+phone_template=polycom_phone_obi.cfg
+line_template=polycom_line.cfg
+output=${MAC}.xml
+input_1=polycom_device_obi5xx.cfg
+output_1=OBi508.xml
+

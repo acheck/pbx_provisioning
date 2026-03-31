@@ -1,0 +1,28 @@
+[fanvil-dss]
+label=Fanvil DSS Page
+buttons=20
+pages=3
+blf_template=fanvil_panel_dss_blf.cfg
+dnd_template=fanvil_panel_dss_dnd.cfg
+linekey_template=fanvil_panel_dss_linekey.cfg
+mcpage_template=fanvil_panel_dss_mcpage.cfg
+callpark_template=fanvil_panel_dss_park.cfg
+prefix_template=fanvil_panel_dss_prefix.cfg
+speeddial_template=fanvil_panel_dss_speeddial.cfg
+record_template=fanvil_panel_dss_record.cfg
+vm_template=fanvil_panel_dss_vm.cfg
+
+[fanvil-side]
+label=Fanvil Side Page
+buttons=20
+pages=3
+blf_template=fanvil_panel_side_blf.cfg
+dnd_template=fanvil_panel_side_dnd.cfg
+linekey_template=fanvil_panel_side_linekey.cfg
+mcpage_template=fanvil_panel_side_mcpage.cfg
+callpark_template=fanvil_panel_side_park.cfg
+prefix_template=fanvil_panel_side_prefix.cfg
+speeddial_template=fanvil_panel_side_speeddial.cfg
+record_template=fanvil_panel_side_record.cfg
+vm_template=fanvil_panel_side_vm.cfg
+

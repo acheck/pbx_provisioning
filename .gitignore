@@ -1,1 +1,2 @@
-provisioning/
+# Vendor bundles keep their own git repos; do not track nested .git metadata in this repo
+provisioning/**/.git/

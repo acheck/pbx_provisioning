@@ -1,0 +1,134 @@
+[htek-uc902]
+label=Htek UC902
+lines=2
+check_sync=htek-check-cfg
+translationmap=htek
+use_span=0
+phone_template=htek_phone.cfg
+line_template=htek_line.cfg
+linekey_template=htek_button_linekey.cfg
+output=${mac}.txt
+input_1=htek_device.cfg
+output_1=cfg0111.xml
+command_1=/usr/local/sbin/htek-convert-to-xml.py ${mac}
+command_2=/usr/local/sbin/generate_compdir_htek.py ${TENANT} 
+
+[htek-uc912]
+label=Htek UC912
+lines=4
+check_sync=htek-check-cfg
+translationmap=htek
+use_span=0
+phone_template=htek_phone.cfg
+line_template=htek_line.cfg
+linekey_template=htek_button_linekey.cfg
+blf_template=htek_button_blf.cfg
+speeddial_template=htek_button_speeddial.cfg
+dnd_template=htek_button_dnd.cfg
+grppickup_template=htek_button_grppickup.cfg
+prefix_template=htek_button_prefix.cfg
+mcpage_template=htek_button_mcpage.cfg
+callpark_template=htek_button_park.cfg
+transfer_template=htek_button_transfer.cfg
+output=${mac}.txt
+input_1=htek_device.cfg
+output_1=cfg0019.xml
+command_1=/usr/local/sbin/htek-convert-to-xml.py ${mac}
+command_2=/usr/local/sbin/generate_compdir_htek.py ${TENANT} 
+
+[htek-uc903]
+label=Htek UC903
+lines=6
+check_sync=htek-check-cfg
+translationmap=htek
+use_span=0
+phone_template=htek_phone.cfg
+line_template=htek_line.cfg
+linekey_template=htek_button_linekey.cfg
+blf_template=htek_button_blf.cfg
+speeddial_template=htek_button_speeddial.cfg
+dnd_template=htek_button_dnd.cfg
+grppickup_template=htek_button_grppickup.cfg
+prefix_template=htek_button_prefix.cfg
+mcpage_template=htek_button_mcpage.cfg
+callpark_template=htek_button_park.cfg
+transfer_template=htek_button_transfer.cfg
+output=${mac}.txt
+input_1=htek_device.cfg
+output_1=cfg0016.xml
+command_1=/usr/local/sbin/htek-convert-to-xml.py ${mac}
+command_2=/usr/local/sbin/generate_compdir_htek.py ${TENANT} 
+
+[htek-uc923]
+label=Htek UC923
+lines=8
+check_sync=htek-check-cfg
+translationmap=htek
+use_span=0
+phone_template=htek_phone.cfg
+line_template=htek_line.cfg
+linekey_template=htek_button_linekey.cfg
+blf_template=htek_button_blf.cfg
+speeddial_template=htek_button_speeddial.cfg
+dnd_template=htek_button_dnd.cfg
+grppickup_template=htek_button_grppickup.cfg
+prefix_template=htek_button_prefix.cfg
+mcpage_template=htek_button_mcpage.cfg
+callpark_template=htek_button_park.cfg
+transfer_template=htek_button_transfer.cfg
+output=${mac}.txt
+input_1=htek_device.cfg
+output_1=cfg0013.xml
+command_1=/usr/local/sbin/htek-convert-to-xml.py ${mac}
+command_2=/usr/local/sbin/generate_compdir_htek.py ${TENANT} 
+
+[htek-uc924]
+label=Htek UC924 / UC924E
+lines=12
+check_sync=htek-check-cfg
+translationmap=htek
+use_span=0
+phone_template=htek_phone.cfg
+line_template=htek_line.cfg
+linekey_template=htek_button_linekey.cfg
+blf_template=htek_button_blf.cfg
+speeddial_template=htek_button_speeddial.cfg
+dnd_template=htek_button_dnd.cfg
+grppickup_template=htek_button_grppickup.cfg
+prefix_template=htek_button_prefix.cfg
+mcpage_template=htek_button_mcpage.cfg
+callpark_template=htek_button_park.cfg
+transfer_template=htek_button_transfer.cfg
+output=${mac}.txt
+input_1=htek_device.cfg
+output_1=cfg0012.xml
+input_2=htek_device.cfg
+output_2=cfg0112.xml
+command_1=/usr/local/sbin/htek-convert-to-xml.py ${mac}
+command_2=/usr/local/sbin/generate_compdir_htek.py ${TENANT} 
+
+[htek-uc926]
+label=Htek UC926 / UC926E
+lines=12
+check_sync=htek-check-cfg
+translationmap=htek
+use_span=0
+phone_template=htek_phone.cfg
+line_template=htek_line.cfg
+linekey_template=htek_button_linekey.cfg
+blf_template=htek_button_blf.cfg
+speeddial_template=htek_button_speeddial.cfg
+dnd_template=htek_button_dnd.cfg
+grppickup_template=htek_button_grppickup.cfg
+prefix_template=htek_button_prefix.cfg
+mcpage_template=htek_button_mcpage.cfg
+callpark_template=htek_button_park.cfg
+transfer_template=htek_button_transfer.cfg
+output=${mac}.txt
+input_1=htek_device.cfg
+output_1=cfg0010.xml
+input_2=htek_device.cfg
+output_2=cfg0110.xml
+command_1=/usr/local/sbin/htek-convert-to-xml.py ${mac}
+command_2=/usr/local/sbin/generate_compdir_htek.py ${TENANT} 
+

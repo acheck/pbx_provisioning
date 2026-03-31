@@ -1,0 +1,211 @@
+[gs-gxp1610]
+label=Grandstream GXP1610
+lines=2
+check_sync=gs-check-cfg
+translationmap=grandstream
+use_span=0
+phone_template=gs_gxp21xx_phone.cfg
+line_template=gs_gxp21xx_line.cfg
+linekey_template=gs_gxp21xx_linekey.cfg
+output=${mac}.txt
+command_1=/usr/local/sbin/gs-convert-to-xml.py ${mac}
+command_2=/usr/local/sbin/generate_compdir_gs.py ${TENANT}
+
+[gs-gxp1615]
+label=Grandstream GXP1615
+lines=2
+check_sync=gs-check-cfg
+translationmap=grandstream
+use_span=0
+phone_template=gs_gxp21xx_phone.cfg
+line_template=gs_gxp21xx_line.cfg
+linekey_template=gs_gxp21xx_linekey.cfg
+output=${mac}.txt
+command_1=/usr/local/sbin/gs-convert-to-xml.py ${mac}
+command_2=/usr/local/sbin/generate_compdir_gs.py ${TENANT}
+
+[gs-gxp1620]
+label=Grandstream GXP1620
+lines=2
+check_sync=gs-check-cfg
+translationmap=grandstream
+use_span=0
+phone_template=gs_gxp21xx_phone.cfg
+line_template=gs_gxp21xx_line.cfg
+linekey_template=gs_gxp21xx_linekey.cfg
+output=${mac}.txt
+command_1=/usr/local/sbin/gs-convert-to-xml.py ${mac}
+command_2=/usr/local/sbin/generate_compdir_gs.py ${TENANT}
+
+[gs-gxp1625]
+label=Grandstream GXP1625
+lines=2
+check_sync=gs-check-cfg
+translationmap=grandstream
+use_span=0
+phone_template=gs_gxp21xx_phone.cfg
+line_template=gs_gxp21xx_line.cfg
+linekey_template=gs_gxp21xx_linekey.cfg
+output=${mac}.txt
+command_1=/usr/local/sbin/gs-convert-to-xml.py ${mac}
+command_2=/usr/local/sbin/generate_compdir_gs.py ${TENANT}
+
+[gs-gxp1628]
+label=Grandstream GXP1628
+lines=2
+check_sync=gs-check-cfg
+translationmap=grandstream
+use_span=0
+phone_template=gs_gxp21xx_phone.cfg
+line_template=gs_gxp21xx_line.cfg
+linekey_template=gs_gxp21xx_linekey.cfg
+blf_template=gs_gxp21xx_mpkblf.cfg
+mcpage_template=gs_gxp21xx_mpkmcpage.cfg
+callpark_template=gs_gxp21xx_mpkpark.cfg
+speeddial_template=gs_gxp21xx_mpkspeeddial.cfg
+vm_template=gs_gxp21xx_mpkvm.cfg
+transfer_template=gs_gxp21xx_mpkxfr.cfg
+output=${mac}.txt
+command_1=/usr/local/sbin/gs-convert-to-xml.py ${mac}
+command_2=/usr/local/sbin/generate_compdir_gs.py ${TENANT}
+
+[gs-gxp1630]
+label=Grandstream GXP1630
+lines=3
+check_sync=gs-check-cfg
+translationmap=grandstream
+use_span=0
+phone_template=gs_gxp21xx_phone.cfg
+line_template=gs_gxp21xx_line.cfg
+linekey_template=gs_gxp21xx_linekey.cfg
+blf_template=gs_gxp21xx_mpkblf.cfg
+mcpage_template=gs_gxp21xx_mpkmcpage.cfg
+callpark_template=gs_gxp21xx_mpkpark.cfg
+speeddial_template=gs_gxp21xx_mpkspeeddial.cfg
+vm_template=gs_gxp21xx_mpkvm.cfg
+transfer_template=gs_gxp21xx_mpkxfr.cfg
+output=${mac}.txt
+command_1=/usr/local/sbin/gs-convert-to-xml.py ${mac}
+command_2=/usr/local/sbin/generate_compdir_gs.py ${TENANT}
+
+[gs-gxp2130]
+label=Grandstream GXP2130
+lines=3
+check_sync=gs-check-cfg
+translationmap=grandstream
+use_span=0
+phone_template=gs_gxp21xx_phone.cfg
+line_template=gs_gxp21xx_line.cfg
+linekey_template=gs_gxp21xx_linekey.cfg
+blf_template=gs_gxp21xx_mpkblf.cfg
+speeddial_template=gs_gxp21xx_mpkspeeddial.cfg
+mcpage_template=gs_gxp21xx_mpkmcpage.cfg
+conference_template=gs_gxp21xx_mpkconf.cfg
+callpark_template=gs_gxp21xx_mpkpark.cfg
+record_template=gs_gxp21xx_mpkrecord.cfg
+vm_template=gs_gxp21xx_mpkvm.cfg
+transfer_template=gs_gxp21xx_mpkxfr.cfg
+output=${mac}.txt
+command_1=/usr/local/sbin/gs-convert-to-xml.py ${mac}
+command_2=/usr/local/sbin/generate_compdir_gs.py ${TENANT}
+
+[gs-gxp2135]
+label=Grandstream GXP2135
+lines=4
+check_sync=gs-check-cfg
+translationmap=grandstream
+use_span=0
+phone_template=gs_gxp21xx_phone.cfg
+line_template=gs_gxp21xx_line.cfg
+linekey_template=gs_gxp21xx_linekey.cfg
+blf_template=gs_gxp21xx_vpkblf.cfg
+conference_template=gs_gxp21xx_vpkconf.cfg
+dnd_template=gs_gxp21xx_vpkdnd.cfg
+callpark_template=gs_gxp21xx_vpkpark.cfg
+record_template=gs_gxp21xx_vpkrecord.cfg
+speeddial_template=gs_gxp21xx_vpkspeeddial.cfg
+vm_template=gs_gxp21xx_vpkvm.cfg
+transfer_template=gs_gxp21xx_vpkxfr.cfg
+output=${mac}.txt
+command_1=/usr/local/sbin/gs-convert-to-xml.py ${mac}
+command_2=/usr/local/sbin/generate_compdir_gs.py ${TENANT}
+
+[gs-gxp2140]
+label=Grandstream GXP2140
+lines=4
+check_sync=gs-check-cfg
+translationmap=grandstream
+use_span=0
+phone_template=gs_gxp21xx_phone.cfg
+line_template=gs_gxp21xx_line.cfg
+linekey_template=gs_gxp21xx_linekey.cfg
+blf_template=gs_gxp21xx_vpkblf.cfg
+conference_template=gs_gxp21xx_vpkconf.cfg
+dnd_template=gs_gxp21xx_vpkdnd.cfg
+callpark_template=gs_gxp21xx_vpkpark.cfg
+record_template=gs_gxp21xx_vpkrecord.cfg
+speeddial_template=gs_gxp21xx_vpkspeeddial.cfg
+vm_template=gs_gxp21xx_vpkvm.cfg
+transfer_template=gs_gxp21xx_vpkxfr.cfg
+output=${mac}.txt
+command_1=/usr/local/sbin/gs-convert-to-xml.py ${mac}
+command_2=/usr/local/sbin/generate_compdir_gs.py ${TENANT}
+
+[gs-gxp2160]
+label=Grandstream GXP2160
+lines=6
+check_sync=gs-check-cfg
+translationmap=grandstream
+use_span=0
+phone_template=gs_gxp21xx_phone.cfg
+line_template=gs_gxp21xx_line.cfg
+linekey_template=gs_gxp21xx_linekey.cfg
+blf_template=gs_gxp21xx_mpkblf.cfg
+speeddial_template=gs_gxp21xx_mpkspeeddial.cfg
+mcpage_template=gs_gxp21xx_mpkmcpage.cfg
+conference_template=gs_gxp21xx_mpkconf.cfg
+callpark_template=gs_gxp21xx_mpkpark.cfg
+record_template=gs_gxp21xx_mpkrecord.cfg
+vm_template=gs_gxp21xx_mpkvm.cfg
+transfer_template=gs_gxp21xx_mpkxfr.cfg
+output=${mac}.txt
+command_1=/usr/local/sbin/gs-convert-to-xml.py ${mac}
+command_2=/usr/local/sbin/generate_compdir_gs.py ${TENANT}
+
+[gs-gxp2170]
+label=Grandstream GXP2170 + GXP2200EXT
+lines=6
+check_sync=gs-check-cfg
+translationmap=grandstream
+use_span=0
+phone_template=gs_gxp21xx_phone.cfg
+line_template=gs_gxp21xx_line.cfg
+linekey_template=gs_gxp21xx_linekey.cfg
+blf_template=gs_gxp21xx_expblf.cfg
+speeddial_template=gs_gxp21xx_expspeeddial.cfg
+mcpage_template=gs_gxp21xx_expmcpage.cfg
+output=${mac}.txt
+command_1=/usr/local/sbin/gs-convert-to-xml.py ${mac}
+command_2=/usr/local/sbin/generate_compdir_gs.py ${TENANT}
+
+[gs-gxp2170vpk]
+label=Grandstream GXP2170 + VPKs 
+lines=6
+check_sync=gs-check-cfg
+translationmap=grandstream
+use_span=0
+phone_template=gs_gxp21xx_phone.cfg
+line_template=gs_gxp21xx_line.cfg
+linekey_template=gs_gxp21xx_linekey.cfg
+blf_template=gs_gxp21xx_vpkblf.cfg
+conference_template=gs_gxp21xx_vpkconf.cfg
+dnd_template=gs_gxp21xx_vpkdnd.cfg
+callpark_template=gs_gxp21xx_vpkpark.cfg
+record_template=gs_gxp21xx_vpkrecord.cfg
+speeddial_template=gs_gxp21xx_vpkspeeddial.cfg
+vm_template=gs_gxp21xx_vpkvm.cfg
+transfer_template=gs_gxp21xx_vpkxfr.cfg
+output=${mac}.txt
+command_1=/usr/local/sbin/gs-convert-to-xml.py ${mac}
+command_2=/usr/local/sbin/generate_compdir_gs.py ${TENANT}
+

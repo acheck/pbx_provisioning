@@ -1,0 +1,81 @@
+Only in /etc/kamailio: generated
+Only in /etc/kamailio/include: custom
+diff -ur ./include/features/registrar.cfg /etc/kamailio/include/features/registrar.cfg
+--- ./include/features/registrar.cfg	2023-01-12 19:39:07.000000000 +0300
++++ /etc/kamailio/include/features/registrar.cfg	2023-01-19 16:53:29.259071511 +0300
+@@ -30,6 +30,8 @@
+ # account registration status htable
+ modparam("htable", "htable", "tl_active_registrations=>size=8;dbtable=tl_active_registrations;dbmode=1;autoexpire=3630")
+ 
++//Marlink patch #2
++modparam("htable", "htable", "tl_extensions_marlink_mod2=>size=4;autoexpire=7230")
+ 
+ # Authentication route
+ route[AUTH] {
+@@ -86,6 +88,16 @@
+   if (is_method("INVITE|REGISTER") || from_uri==myself) {
+     xlog("L_DBG", "== TRACE. $ci - AUTH. Method INVITE || REGISTER or from_uri==myself\n");
+ 
++    //Marlink patch #2
++    if ($(ua{s.substr,0,8}) == "Cisco-CP" && is_method("PUBLISH")) {
++      $var(mac_addr) = $fU;
++      xlog("L_DBG", "== TRACE. Marlink #2. $ci - AUTH. PUBLISH. Cisco-CP phone with MAC address: $var(mac_addr)\n");
++      if ($sht(tl_extensions_marlink_mod2=>$var(mac_addr)) != $null) {
++        xlog("L_DBG", "== TRACE. Marlink #2. $ci - AUTH. Match found. Returning\n");
++        return;
++      }
++    }
++
+     xlog("L_DBG", "== TRACE. $ci - AUTH. Auth username is $AU\n");
+     $avp(password) = $sht(tl_extensions=>$AU);
+ 
+@@ -214,6 +226,36 @@
+   }
+   evapi_relay("{ \"source\": \"REGISTRAR\", \"event\": \"location\", \"type\": \"$var(rc)\", \"callid\": \"$ci\",\"ruid\": \"$var(ruid)\",\"exten\": \"$au\", \"addr\": \"$si\", \"useragent\": \"$ua\", \"expires\": \"$expires(max)\", \"x-real-addr\": \"$var(x-real-addr)\", \"contact\": \"$var(ct)\", \"conid\": \"$conid\" }");
+ 
++  //Marlink patch #2
++  if ($var(rc) =~ "1|2|3") {
++    xlog("L_DBG", "== TRACE. Marlink #2. $ci - REGISTRAR\n");
++    if ($(ua{s.substr,0,8}) == "Cisco-CP") {
++      $var(mac_addr) = $hdr(Call-ID);
++      $var(mac_addr) = $(var(mac_addr){s.substr,0,13});
++      $var(mac_addr) = $(var(mac_addr){s.replace,-,});
++      xlog("L_DBG", "== TRACE. Marlink #2. $ci - REGISTRAR. Cisco-CP phone with MAC address: $var(mac_addr)\n");
++      if ($var(rc) == "3") {
++        $sht(tl_extensions_marlink_mod2=>$var(mac_addr)) = $null;
++      } else {
++        $sht(tl_extensions_marlink_mod2=>$var(mac_addr)) = $var(endpoint);
++      }      
++    }
++    $du = "sip:" + $sel(cfg_get.asterisk.bindip) + ":" + $sel(cfg_get.asterisk.bindport);
++    $fs = "udp:" + $sel(cfg_get.kamailio.bindip) + ":" + $sel(cfg_get.kamailio.bindport);
++    $var(contact) = $hdr(Contact);
++    remove_hf("Contact");
++    $var(contact) = $(var(contact){s.select,0,@});
++    $var(contact) = $var(contact) + "@" + $sel(cfg_get.kamailio.bindip) + ":" + $sel(cfg_get.kamailio.bindport) + ">";
++    if (!is_present_hf("Expires")) {
++      $var(contact) = $var(contact) + ";expires=" + $expires(max);
++    }
++    insert_hf("Contact: $var(contact)\r\n", "Call-ID");
++    insert_hf("X-SBC-Source: $si:$sp\r\n", "User-Agent");
++    //setflag(MARLINK);
++    //t_on_reply("REPLY_SIP_TO_SIP");
++    t_relay();
++  }
++
+   switch ($var(rc)) {
+     case -2:
+       xlog("L_DBG", "== TRACE. $ci - REGISTRAR. Save contact - $au - $si - $ua: err, too many contacts for AoR\n");
+Only in /etc/kamailio/include/features: registrar.cfg.orig
+diff -ur ./local.cfg /etc/kamailio/local.cfg
+--- ./local.cfg	2022-11-24 16:46:28.000000000 +0300
++++ /etc/kamailio/local.cfg	2023-01-19 15:49:54.972526706 +0300
+@@ -7,7 +7,7 @@
+ include_file "/etc/kamailio/generated/variables.cfg"
+ 
+ #Set log level. Check kamailio.cfg for reference
+-#!define LOG_LEVEL L_ERR
++#!define LOG_LEVEL L_DBG
+ 
+ #Uncoment USE_LAN_FOR_PUBLIC flag to use LAN network interfaces for communication with public destinations
+ ##!define USE_LAN_FOR_PUBLIC

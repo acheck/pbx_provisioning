@@ -1,0 +1,16 @@
+--- scripts.include.orig	2023-01-31 18:35:24.729985684 +0300
++++ scripts.include	2023-02-02 15:15:15.394062871 +0300
+@@ -967,7 +967,12 @@
+ 
+ ;; CALL FORWARDING
+ 
+-exten => s,n(forwarding),GotoIf($["${HASH(CALLEE,CFA)}" != "1"]?followmecheck)
++exten => s,n(forwarding),Set(CISCO_CFWD=${SIPPEER(${CALLEE_NUMBER},callforward)})
++exten => s,n,GotoIf($["${CISCO_CFWD}" = ""]?forwarding2)
++exten => s,n,Dial(Local/${CISCO_CFWD}@from-inside${TL_DASH}${tenant},${TIMEOUT},${OPTIONS}${SCREEN_FORWARD_OPTIONS})
++exten => s,n,Goto(s-forw-${DIALSTATUS},1)
++
++exten => s,n(forwarding2),GotoIf($["${HASH(CALLEE,CFA)}" != "1"]?followmecheck)
+ exten => s,n,GotoIf($["${CALLFWD}" = "2"]?hangup)
+ exten => s,n,Set(__CALLFWD=1)
+ exten => s,n,GotoIf($["${HASH(CALLEE,CFAN)}" = ""]?followmecheck)

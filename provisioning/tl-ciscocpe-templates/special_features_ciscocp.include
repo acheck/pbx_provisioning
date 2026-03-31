@@ -1,0 +1,43 @@
+[from-inside]
+
+; service-uri-cfwdall-602
+; 1234567890123
+exten => _service-uri-.,1,Goto(from-inside-cisco,${EXTEN:12},1)
+
+; x-cisco-serviceuri-blfpickup-104
+; 12345678901234567890
+exten => _[x]-cisco-serviceuri-.,1,Goto(from-inside-cisco,${EXTEN:19},1)
+
+[from-inside-cisco]
+
+
+; Enable call-forwarding
+; service-uri-cfwdall-602
+; cfwdall-602
+; 12345678
+exten => _cfwdall-.,1,Answer()
+ same => n,Set(SIPPEER(${CHANNEL(peername)},callforward)=${EXTEN:8})
+ same => n,Hangup(normal_clearing)
+
+; Disable call-forwarding
+; service-uri-cfwdall
+exten => cfwdall,1,Answer()
+ same => n,Set(SIPPEER(${CHANNEL(peername)},callforward)=)
+ same => n,Hangup(normal_clearing)
+
+
+; BLF Pickup
+; x-cisco-serviceuri-blfpickup-104
+; blfpickup-104
+exten => _blfpickup-.,1,PickupChan(SIP/${EXTEN:10})
+ same => n,Hangup(normal_circuit_congestion)
+
+; Pickup
+; service-uri-pickup
+; pickup
+;exten => pickup,1,Pickup()
+exten => pickup,1,Goto(pickup0,s,1) 
+
+[pickup0]
+exten => s,2,Hangup(normal_circuit_congestion)
+
