@@ -3,7 +3,7 @@
     <phone-settings>
         <update_policy perm="">auto_update</update_policy>
         <logon_wizard perm="">off</logon_wizard>
-        <firmware perm="">https://${HTTP_USER}:${HTTP_PASSWORD}@${SERVER}/provisioning/FIRMWARE-SNOM/%firmware</firmware> 
+        <firmware perm="">${PROTO}://${PROV_USER}:${PROV_PASSWORD}@${FIRMWARE_SERVER}${FIRMWARE_PATH}/FIRMWARE-SNOM/%firmware</firmware> 
     </phone-settings>
 </settings>
 

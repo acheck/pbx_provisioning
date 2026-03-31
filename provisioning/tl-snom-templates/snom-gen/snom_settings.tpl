@@ -58,7 +58,7 @@ update_policy: auto_update
 #define the firmware update interval here, amount in minutes, default is 1440 = 1 day
 ## firmware_interval: 2880
 logon_wizard: off
-firmware: https://${HTTP_USER}:${HTTP_PASSWORD}@${SERVER}/provisioning/FIRMWARE-SNOM/%firmware
+firmware: ${PROTO}://${PROV_USER}:${PROV_PASSWORD}@${FIRMWARE_SERVER}${FIRMWARE_PATH}/FIRMWARE-SNOM/%firmware
 
 </pre>
 </html>
